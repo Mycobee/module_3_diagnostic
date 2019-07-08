@@ -1,0 +1,9 @@
+<ul class='food-results'>
+	<% facade.foods.each do |food| %>
+		<li class='result-ndbnum'><%= food.ndbnum %></li>
+		<li class='result-name'><%= food.name %></li>
+		<li class='result-group'><%= food.group %></li>
+		<li class='result-datasrc'><%= food.datasrc %></li>
+		<li class='result-manufacturer'><%= food.manufacturer %></li>
+	<% end %>
+</ul>

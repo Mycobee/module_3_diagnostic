@@ -5,7 +5,7 @@ feature "As a user on the root path" do
 		it "takes me to the food path and shows items returned" do
 			visit root_path
 
-			fill_in('Search', with: 'sweet potatoes')		
+			fill_in('q', with: 'sweet potatoes')		
 
 			click_button('Search')
 
