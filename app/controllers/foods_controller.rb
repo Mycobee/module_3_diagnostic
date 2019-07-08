@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
 	def index 
+###REFACTOR IN TO SERVICE AFTER FUNCTIONALITY IS COMPLETE
 		search_request = params["q"]
 
 		conn = Faraday.new(url: 'https://api.nal.usda.gov/ndb/search') do |faraday|
@@ -11,7 +12,8 @@ class FoodsController < ApplicationController
 		
 		response = conn.get
 
-		foods = JSON.parse(response.body)
+		foods = JSON.parse(response.body)["list"]["item"]
+binding.pry
 		render locals: {
 			facade: FoodFacade.new(foods)
 		}
