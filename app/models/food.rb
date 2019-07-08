@@ -6,10 +6,10 @@ class Food
               :manufacturer
 
   def initialize(attributes = {})
-		@ndbnum = attributes[:ndbnum]
+		@ndbnum = attributes[:ndbno]
 		@name = attributes[:name]
 		@group = attributes[:group]
-		@datasrc = attributes[:datasrc]
-		@manufacturer = attributes[:manufacturer]
+		@datasrc = attributes[:ds]
+		@manufacturer = attributes[:manu]
   end
 end

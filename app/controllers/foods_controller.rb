@@ -12,8 +12,7 @@ class FoodsController < ApplicationController
 		
 		response = conn.get
 
-		foods = JSON.parse(response.body)["list"]["item"]
-binding.pry
+		foods = JSON.parse(response.body, symbolize_names: true)[:list][:item]
 		render locals: {
 			facade: FoodFacade.new(foods)
 		}

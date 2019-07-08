@@ -4,8 +4,8 @@ class FoodFacade
 	end
 
 	def get_foods
-		@foods.each do |food|
-		binding.pry	
+		@foods.map do |food|
+			Food.new(food)
 		end
 	end
 end

@@ -1,5 +1,5 @@
 <ul class='food-results'>
-	<% facade.foods.each do |food| %>
+	<% facade.get_foods.each do |food| %>
 		<li class='result-ndbnum'><%= food.ndbnum %></li>
 		<li class='result-name'><%= food.name %></li>
 		<li class='result-group'><%= food.group %></li>
