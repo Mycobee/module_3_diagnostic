@@ -12,11 +12,11 @@ feature "As a user on the root path" do
 			expect(current_path).to eq(foods_path)
 
 			within '.food-results' do 
-				expect(page).to have_css(.result-ndbnum)
-				expect(page).to have_css(.result-name)
-				expect(page).to have_css(.result-group)
-				expect(page).to have_css(.result-datasrc)
-				expect(page).to have_css(.result-manufacturer)
+				expect(page).to have_css('.result-ndbnum')
+				expect(page).to have_css('.result-name')
+				expect(page).to have_css('.result-group')
+				expect(page).to have_css('.result-datasrc')
+				expect(page).to have_css('.result-manufacturer')
 			end
 		end	
 	end
